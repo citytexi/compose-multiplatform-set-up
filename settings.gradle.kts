@@ -28,4 +28,12 @@ dependencyResolutionManagement {
     }
 }
 
-include(":composeApp")
+include(
+    ":app:androidApp",
+    ":app:iosApp",
+)
+
+include(
+    ":share:share-App",
+    ":share:share-UI",
+)
