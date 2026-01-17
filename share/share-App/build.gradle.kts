@@ -1,10 +1,13 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlinMultiplatformAndroid)
 }
 
 kotlin {
-    androidTarget {}
+    androidLibrary {
+        namespace = "org.example.project.share.app"
+        compileSdk = libs.versions.android.compileSdk.get().toInt()
+    }
 
     listOf(
         iosArm64(),
@@ -17,18 +20,10 @@ kotlin {
     }
 
     sourceSets {
-        commonMain.dependencies {
-
-
-        }
+        commonMain.dependencies {}
 
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
     }
-}
-
-android {
-    namespace = "org.example.project.share.app"
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
 }

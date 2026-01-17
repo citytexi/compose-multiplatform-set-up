@@ -1,12 +1,15 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-    alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlinMultiplatformAndroid)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
 }
 
 kotlin {
-    androidTarget {}
+    androidLibrary {
+        namespace = "org.example.project.share.ui"
+        compileSdk = libs.versions.android.compileSdk.get().toInt()
+    }
 
     listOf(
         iosArm64(),
@@ -34,9 +37,4 @@ kotlin {
             implementation(libs.compose.ui.test)
         }
     }
-}
-
-android {
-    namespace = "org.example.project.share.ui"
-    compileSdk = libs.versions.android.compileSdk.get().toInt()
 }
