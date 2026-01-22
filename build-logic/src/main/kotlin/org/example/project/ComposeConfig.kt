@@ -10,10 +10,10 @@ internal fun Project.setConfigComposeMultiplatform(extension: KotlinMultiplatfor
             dependencies {
                 implementation(libs.compose.runtime)
                 implementation(libs.compose.foundation)
-                implementation(libs.compose.ui.backhandler)
-                implementation(libs.compose.ui.tooling.preview)
-                implementation(libs.compose.components.resources)
-                implementation(libs.compose.components.ui.tooling.preview)
+                implementation(libs.compose.uiBackhandler)
+                implementation(libs.compose.uiToolingPreview)
+                implementation(libs.compose.componentsResources)
+                implementation(libs.compose.componentsUiToolingPreview)
                 implementation(libs.compose.material3)
             }
         }
@@ -22,7 +22,7 @@ internal fun Project.setConfigComposeMultiplatform(extension: KotlinMultiplatfor
         .named("commonTest")
         .configure {
             dependencies {
-                implementation(libs.compose.ui.test)
+                implementation(libs.compose.uiTest)
             }
         }
 }

@@ -1,8 +1,8 @@
 import org.gradle.kotlin.dsl.kotlin
 
 plugins {
-    alias(libs.plugins.example.kmp.lib)
-    alias(libs.plugins.example.compose.multiplatform)
+    alias(libs.plugins.example.kmpLib)
+    alias(libs.plugins.example.composeMultiplatform)
 }
 
 kotlin {

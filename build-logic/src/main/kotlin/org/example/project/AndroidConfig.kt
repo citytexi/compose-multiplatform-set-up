@@ -45,7 +45,7 @@ internal fun Project.setConfigAndroidApplication(extension: ApplicationExtension
         implementation(project(":share:share-App"))
         implementation(project(":share:share-UI"))
 
-        implementation(libs.androidx.activity.compose)
+        implementation(libs.androidx.activityCompose)
         implementation(libs.androidx.splash)
     }
 }

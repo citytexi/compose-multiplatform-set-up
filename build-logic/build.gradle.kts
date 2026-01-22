@@ -21,10 +21,10 @@ dependencies {
     // This allows the use of the 'libs' type-safe accessor in the Kotlin source of the plugins
     compileOnly(files((libs as Any).javaClass.superclass.protectionDomain.codeSource.location))
 
-    compileOnly(libs.kotlin.gradle.plugin)
-    compileOnly(libs.android.gradle.plugin)
+    compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.compose.gradlePlugin)
-    compileOnly(libs.compose.multiplatform.gradlePlugin)
+    compileOnly(libs.composeMultiplatform.gradlePlugin)
 }
 
 gradlePlugin {

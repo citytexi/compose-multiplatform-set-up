@@ -1,3 +1,3 @@
 plugins {
-    alias(libs.plugins.example.ios.application)
+    alias(libs.plugins.example.iosApplication)
 }

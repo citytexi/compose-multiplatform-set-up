@@ -18,27 +18,28 @@ composeMultiplatformMaterial3 = "1.9.0"
 kotlin = "2.3.0"
 
 [libraries]
-kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+# Gradle Plugins
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+composeMultiplatform-gradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeMultiplatform" }
 
 # Compose Multiplatform
 compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
-compose-ui-backhandler = { module = "org.jetbrains.compose.ui:ui-backhandler", version.ref = "composeMultiplatform" }
-compose-ui-tooling-preview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
-compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
-compose-components-ui-tooling-preview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "composeMultiplatform" }
-compose-ui-test = { module = "org.jetbrains.compose.ui:ui-test", version.ref = "composeMultiplatform" }
+compose-uiBackhandler = { module = "org.jetbrains.compose.ui:ui-backhandler", version.ref = "composeMultiplatform" }
+compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
+compose-componentsResources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
+compose-componentsUiToolingPreview = { module = "org.jetbrains.compose.components:components-ui-tooling-preview", version.ref = "composeMultiplatform" }
 
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMultiplatformMaterial3" }
 
-androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
+# Android
+androidx-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
 androidx-splash = { module = "androidx.core:core-splashscreen", version.ref = "androidxSplashScreen" }
 
-# Gradle Plugins
-kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
-android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
-compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
-compose-multiplatform-gradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeMultiplatform" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+compose-uiTest = { module = "org.jetbrains.compose.ui:ui-test", version.ref = "composeMultiplatform" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
@@ -48,7 +49,7 @@ kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref =
 kotlinMultiplatformAndroid = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 
 # custom plugins
-example-android-application = { id = "org.example.project.androidApplication", version = "unspecified" }
-example-ios-application = { id = "org.example.project.iosApplication", version = "unspecified" }
-example-kmp-lib = { id = "org.example.project.kmpLib", version = "unspecified" }
-example-compose-multiplatform = { id = "org.example.project.composeMultiplatform", version = "unspecified" }
+example-androidApplication = { id = "org.example.project.androidApplication", version = "unspecified" }
+example-iosApplication = { id = "org.example.project.iosApplication", version = "unspecified" }
+example-kmpLib = { id = "org.example.project.kmpLib", version = "unspecified" }
+example-composeMultiplatform = { id = "org.example.project.composeMultiplatform", version = "unspecified" }
