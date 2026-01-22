@@ -1,8 +1,13 @@
 [versions]
 agp = "9.0.0"
+
+applicationId = "org.example.project"
 android-compileSdk = "36"
 android-minSdk = "24"
 android-targetSdk = "36"
+android-versionCode = "1"
+android-versionName = "1.0.0"
+
 androidxActivity = "1.12.2"
 androidxLifecycle = "2.9.6"
 androidxSplashScreen = "1.2.0"
@@ -29,9 +34,21 @@ compose-material3 = { module = "org.jetbrains.compose.material3:material3", vers
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidxActivity" }
 androidx-splash = { module = "androidx.core:core-splashscreen", version.ref = "androidxSplashScreen" }
 
+# Gradle Plugins
+kotlin-gradle-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+compose-gradlePlugin = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+compose-multiplatform-gradlePlugin = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "composeMultiplatform" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinMultiplatformAndroid = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+
+# custom plugins
+example-android-application = { id = "org.example.project.androidApplication", version = "unspecified" }
+example-ios-application = { id = "org.example.project.iosApplication", version = "unspecified" }
+example-kmp-lib = { id = "org.example.project.kmpLib", version = "unspecified" }
+example-compose-multiplatform = { id = "org.example.project.composeMultiplatform", version = "unspecified" }
